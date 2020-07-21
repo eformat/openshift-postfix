@@ -1,8 +1,8 @@
 ## openshift-postfix
 
-Run postfix smtp relay on openshift. Postfix needs to run as root.
+Run postfix smtp relay on openshift. Postfix needs to run as root so cluster-admin needed to add to service account to `anyuid`.
 
-Deploy
+Deploy to OpenShift
 ```
 oc new-project postfix
 oc adm policy add-scc-to-user anyuid -z default -n postfix
